@@ -1,0 +1,26 @@
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 160rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.peliculas{
+    margin: 0 auto;
+}
+
+.cards{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.mainTitle{
+    text-align: center;
+    font-size: 3rem;
+}
+
+.buscaAlgo{
+    text-align: center;
+    margin-top: 4rem;
+}

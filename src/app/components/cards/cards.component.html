@@ -1,0 +1,29 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+<div class="contenedor_cards">
+    <div class="card-inner">
+        <div class="card-imagen">
+            <img class="imagen" src="{{imagen}}" alt="No hay image">
+        </div>
+
+        <ul class="card-description">
+            <li>
+                <h3>{{name}} </h3>
+            </li>
+            <li>
+                <p>{{fecha}}</p>
+            </li>
+            <li>
+                <p>{{ truncateDescription(description, 120) }} </p>
+            </li>
+            <li>
+                <h4>Original Language:</h4>
+                <p>{{lenguaje}}</p>
+            </li>
+            <li></li>
+        </ul>
+
+    </div>
+</div>

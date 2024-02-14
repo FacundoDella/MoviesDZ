@@ -1,0 +1,22 @@
+<div class="contenedor">
+    <div class="peliculas">
+        <h1 class="mainTitle">Peliculas</h1>
+
+        <div class="cards" *ngFor="let item of store.moviesArray">
+            <app-cards [name]="item['title']" [description]="item['overview']" [lenguaje]="item['original_language']"
+                [imagen]="imgUrl+item['poster_path']" [fecha]="item['release_date']"></app-cards>
+        </div>
+    </div>
+    <div class="series">
+        <h1 class="mainTitle">Series</h1>
+
+        <div class="cards" *ngFor="let item of store.seriesArray">
+            <app-cards [name]="item['name']" [description]="item['overview']" [lenguaje]="item['original_language']"
+                [imagen]="imgUrl+item['poster_path']" [fecha]="item['first_air_date']"></app-cards>
+        </div>
+    </div>
+
+</div>
+<ng-container *ngIf="store.seriesArray.length == 0 && store.moviesArray.length == 0">
+    <h1 class="buscaAlgo">Busca una película o serie...</h1>
+</ng-container>

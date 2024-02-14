@@ -1,0 +1,19 @@
+<div class="contenedor">
+    <div class="peliculas">
+        <h1 class="mainTitle">Peliculas</h1>
+        <div class="buscador">
+            <label class="form__label">
+                <input class="buscador__text" type="text" placeholder="Busca una Película"  [(ngModel)]="store.inputSearch" (keyup.enter)="getMovies()">
+            </label>
+            <input value="Buscar" class="buscador__submit" type="submit" name="" id="" (click)="getMovies()">
+        </div>
+        <div class="cards" *ngFor="let item of store.moviesArray">
+            <app-cards [name]="item['title']" [description]="item['overview']" [lenguaje]="item['original_language']"
+                [imagen]="imgUrl+item['poster_path']" [fecha]="item['release_date']"></app-cards>
+        </div>
+    </div>
+
+    <ng-container *ngIf="store.moviesArray.length == 0 ">
+    <h1 class="buscaAlgo">Busca una Pelicula...</h1>
+    </ng-container>
+</div>

@@ -1,0 +1,20 @@
+<div class="contenedor">
+    <div class="series">
+        <h1 class="mainTitle">Series</h1>
+        <div class="buscador">
+            <label class="form__label">
+                <input class="buscador__text" type="text" placeholder="Busca una Serie" [(ngModel)]="store.inputSearch"
+                    (keyup.enter)="getSeries()">
+            </label>
+            <input value="Buscar" class="buscador__submit" type="submit" name="" id="" (click)="getSeries()">
+        </div>
+        <div class="cards" *ngFor="let item of store.seriesArray">
+            <app-cards [name]="item['name']" [description]="item['overview']" [lenguaje]="item['original_language']"
+                [imagen]="imgUrl+item['poster_path']" [fecha]="item['first_air_date']"></app-cards>
+        </div>
+    </div>
+
+    <ng-container *ngIf="store.seriesArray.length == 0 ">
+        <h1 class="buscaAlgo">Busca una Serie...</h1>
+    </ng-container>
+</div>

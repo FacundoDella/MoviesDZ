@@ -1,0 +1,17 @@
+<main class="imagen">
+    <div class="contenedor-main">
+        <div class="contenido">
+            <h1>Bienvenidos.</h1>
+            <h2>Millones de peliculas y series. Explora ahora</h2>
+        </div>
+
+        <div class="buscador">
+            <form class="form">
+                <label for="" class="form__label">
+                    <input name="buscador" class="buscador__text" type="text" placeholder="Busca una película, programa e television....."  [(ngModel)]="store.inputSearch" store.inputSearch  (keyup.enter)=" getApi()">
+                </label>
+                <input class="buscador__submit" type="text" name="" id="" value="Buscar" (click)="getApi()">
+            </form>
+        </div>
+    </div>
+</main>

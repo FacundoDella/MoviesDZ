@@ -1,0 +1,62 @@
+.peliculas {
+    margin: 0 auto;
+}
+
+.cards {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.mainTitle {
+    text-align: center;
+    font-size: 3rem;
+}
+
+
+.buscador {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.form__label {
+    margin: 0;
+}
+
+
+.buscador__text {
+    width: 85%;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    background-color: #d3d3d3;
+    padding: 1rem;
+    border-radius: 1rem 0 0 1rem;
+    margin-left: 2.5rem;
+}
+
+
+.buscador__submit {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 30px 30px 30px 30px;
+    width: 15%;
+    margin-left: -5rem;
+    background: rgb(0, 255, 226);
+    background: linear-gradient(90deg, rgba(0, 255, 226, 1) 0%, rgba(0, 172, 255, 1) 100%);
+    color: var(--blanco);
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.buscador__submit:hover {
+    transition: 0.1s all ease-in-out;
+    color: var(--negro);
+}
+.buscaAlgo{
+    text-align: center;
+    margin-top: 4rem;
+}

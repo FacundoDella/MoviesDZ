@@ -1,0 +1,15 @@
+/* Generales */
+:host {
+    --blanco: #fff;
+    --negro: #000;
+    --headerColor: #0e004b;
+    --botonesColor: #023E8A;
+    --color1: #0077B6;
+    --color2: #0096C7;
+    --color3: #00B4D8;
+    --color4: #48CAE4;
+    --color5: #90E0EF;
+    --color6: #ADE8F4;
+    --color7: #CAF0F8;
+    --fuente: 'Roboto', sans-serif;
+}

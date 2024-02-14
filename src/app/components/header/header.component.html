@@ -1,0 +1,51 @@
+<header class="contenedor-principal">
+    <div class="contenedor-navegacion">
+        <a class="pointer" (click)="goToWelcome()">Logo Imagen</a>
+        <ul class="navegacion">
+            <li><a (click)="goToMovies()">Películas</a></li>
+            <li><a (click)="goToSeries()">Series</a></li>
+        </ul>
+    </div>
+
+    <div class="contenedor-buscador">
+        <span class="search">
+            <ng-container *ngIf="buscador==false">
+                <a>
+                    <svg (click)="buscadorOn()" xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="3" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                        <path d="M21 21l-6 -6" />
+                    </svg>
+                </a>
+            </ng-container>
+            <ng-container *ngIf="buscador==true">
+                <a>
+                    <svg (click)="buscadorOf()" xmlns="http://www.w3.org/2000/svg"
+                        class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24"
+                        stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 6l-12 12" />
+                        <path d="M6 6l12 12" />
+                    </svg>
+                </a>
+            </ng-container>
+        </span>
+    </div>
+</header>
+
+<ng-container *ngIf="buscador">
+    <div class="buscador">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="20" height="20"
+                viewBox="0 0 24 24" stroke-width="2.2" stroke="#000000" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                <path d="M21 21l-6 -6" />
+            </svg>
+        </span>
+        <input placeholder="Buscar una pelicula, programa de televisíon" [(ngModel)]="store.inputSearch" (keyup.enter)=" getApi()">
+    </div>
+</ng-container>
